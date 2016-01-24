@@ -103,7 +103,7 @@ function sendData()
 getTemp()
 -- conection to thingspeak.com
 print("Sending data to thingspeak.com")
-conn=net.createConnection(net.TCP, 0) 
+conn=net.createConnection(net.TCP, 1) 
 conn:on("receive", function(conn, payload) print(payload) end)
 -- api.thingspeak.com 184.106.153.149
 conn:connect(80,'184.106.153.149') 
